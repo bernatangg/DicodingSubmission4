@@ -5,7 +5,7 @@ import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.assertion.ViewAssertions.matches
 import android.support.test.espresso.contrib.RecyclerViewActions
 import android.support.test.espresso.intent.Intents.intended
-import android.support.test.espresso.intent.matcher.IntentMatchers
+import android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import android.support.test.espresso.intent.rule.IntentsTestRule
 import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
 import android.support.test.espresso.matcher.ViewMatchers.withId
@@ -36,6 +36,6 @@ class NextFragmentTest {
         val itemPos = rand.nextInt(14)
         onView(withId(R.id.rv_next_match))
                 .perform(RecyclerViewActions.actionOnItemAtPosition<TeamViewHolder>(itemPos, click()))
-        intended(IntentMatchers.hasComponent(MatchDetailActivity::class.java.name))
+        intended(hasComponent(MatchDetailActivity::class.java.name))
     }
 }

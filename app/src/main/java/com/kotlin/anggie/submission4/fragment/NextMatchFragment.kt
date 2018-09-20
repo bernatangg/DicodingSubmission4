@@ -17,7 +17,8 @@ import com.kotlin.anggie.submission4.helper.HomeScreenState
 import com.kotlin.anggie.submission4.model.Event
 import com.kotlin.anggie.submission4.presenter.NextMatchPresenter
 import com.kotlin.anggie.submission4.view.NextMatchView
-import kotlinx.android.synthetic.main.fragment_next_match.*
+import kotlinx.android.synthetic.main.fragment_next_match.rv_next_match
+import kotlinx.android.synthetic.main.fragment_next_match.swipe_next_layout
 
 class NextMatchFragment: Fragment(), NextMatchView {
 

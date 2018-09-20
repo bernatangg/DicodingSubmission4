@@ -10,10 +10,11 @@ import com.kotlin.anggie.submission4.model.Event
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
+import com.kotlin.anggie.submission4.adapter.MatchAdapter.TeamViewHolder
 
 class MatchAdapter(private val events: List<Event?>,
                    private val listener: (pos: Int) -> Unit) :
-        RecyclerView.Adapter<MatchAdapter.TeamViewHolder>() {
+        RecyclerView.Adapter<TeamViewHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup,
                                     p1: Int): TeamViewHolder {
