@@ -13,7 +13,7 @@ import android.support.test.runner.AndroidJUnit4
 import android.support.v7.widget.RecyclerView
 import com.kotlin.anggie.submission4.activity.MainActivity
 import com.kotlin.anggie.submission4.activity.MatchDetailActivity
-import com.kotlin.anggie.submission4.adapter.MatchAdapter
+import com.kotlin.anggie.submission4.adapter.MatchAdapter.TeamViewHolder
 import com.kotlin.anggie.submission4.fragment.FavoriteFragment
 import com.kotlin.anggie.submission4.R.id
 import org.junit.Rule
@@ -45,7 +45,7 @@ class FavoriteFragmentTest {
                 val itemPos = rand.nextInt(itemCount)
                 onView(withId(R.id.rv_fav_match))
                         .perform(
-                                RecyclerViewActions.actionOnItemAtPosition<MatchAdapter.TeamViewHolder>(itemPos, ViewActions.click()))
+                                RecyclerViewActions.actionOnItemAtPosition<TeamViewHolder>(itemPos, ViewActions.click()))
                 Intents.intended(IntentMatchers.hasComponent(MatchDetailActivity::class.java.name))
             }
         }
