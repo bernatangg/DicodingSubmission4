@@ -17,7 +17,8 @@ import com.kotlin.anggie.submission4.helper.HomeScreenState
 import com.kotlin.anggie.submission4.model.Event
 import com.kotlin.anggie.submission4.presenter.PrevMatchPresenter
 import com.kotlin.anggie.submission4.view.PrevMatchView
-import kotlinx.android.synthetic.main.fragment_prev_match.*
+import kotlinx.android.synthetic.main.fragment_prev_match.rv_prev_match
+import kotlinx.android.synthetic.main.fragment_prev_match.swipe_prev_layout
 
 class PrevMatchFragment : Fragment(), PrevMatchView {
 
