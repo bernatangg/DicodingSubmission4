@@ -6,20 +6,20 @@ import com.kotlin.anggie.submission4.view.PrevMatchView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-class PrevMatchPresenter(private val prevView: PrevMatchView,
+class PrevMatchPresenter(private val prevMatchView: PrevMatchView,
                          private val apiService: ApiService) {
 
     fun getPrevMatch() {
-        prevView.setScreenState(HomeScreenState.Loading)
+        prevMatchView.setScreenState(HomeScreenState.Loading)
         apiService.getLastEvent()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({eventResponse ->
                     eventResponse.events?.let {
-                        prevView.setScreenState(HomeScreenState.Data(it))
+                        prevMatchView.setScreenState(HomeScreenState.Data(it))
                     }
                 }, {
-                    prevView.setScreenState(HomeScreenState.Error(it.message))
+                    prevMatchView.setScreenState(HomeScreenState.Error(it.message))
                 })
     }
 }

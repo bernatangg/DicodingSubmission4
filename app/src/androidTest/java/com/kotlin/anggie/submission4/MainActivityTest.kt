@@ -32,19 +32,19 @@ class MainActivityTest {
     @Test
     fun testNextMatchIsDisplayed() {
         onView(withId(R.id.action_next)).perform(click())
-        onView(withId(R.id.next_match_layout)).check(matches(isDisplayed()))
+        onView(withId(R.id.next_layout)).check(matches(isDisplayed()))
     }
 
     @Test
     fun testPrevMatchIsDisplayed() {
         onView(withId(R.id.action_prev)).perform(click())
-        onView(withId(R.id.prev_match_layout)).check(matches(isDisplayed()))
+        onView(withId(R.id.prev_layout)).check(matches(isDisplayed()))
     }
 
     @Test
     fun testFavMatchIsDisplayed() {
         onView(withId(R.id.action_favorite)).perform(click())
-        onView(withId(R.id.fav_match_layout)).check(matches(isDisplayed()))
+        onView(withId(R.id.fav_layout)).check(matches(isDisplayed()))
     }
 
 }

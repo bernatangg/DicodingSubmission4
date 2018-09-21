@@ -4,9 +4,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.kotlin.anggie.submission4.R
-import com.kotlin.anggie.submission4.fragment.FavoriteFragment
-import com.kotlin.anggie.submission4.fragment.NextMatchFragment
-import com.kotlin.anggie.submission4.fragment.PrevMatchFragment
+import com.kotlin.anggie.submission4.fragment.FavFragment
+import com.kotlin.anggie.submission4.fragment.NextFragment
+import com.kotlin.anggie.submission4.fragment.PrevFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,19 +18,19 @@ class MainActivity : AppCompatActivity() {
         nav_bottom.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.action_prev -> {
-                    val fragment = PrevMatchFragment()
+                    val fragment = PrevFragment()
                     changeHomeFragment(fragment)
                     true
                 }
 
                 R.id.action_next -> {
-                    val fragment = NextMatchFragment()
+                    val fragment = NextFragment()
                     changeHomeFragment(fragment)
                     true
                 }
 
                 R.id.action_favorite -> {
-                    val fragment = FavoriteFragment()
+                    val fragment = FavFragment()
                     changeHomeFragment(fragment)
                     true
                 }
